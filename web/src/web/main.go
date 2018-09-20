@@ -47,9 +47,6 @@ func main() {
 		ws.Upgrade,
 	)
 
-	// controllers registration here...
 	todosApp.Handle(new(controllers.TodoController))
-
-	// start the web server at http://localhost:8080
-	app.Run(iris.Addr(":8080"), iris.WithoutVersionChecker)
+	app.Run(iris.Addr(":1234"), iris.WithoutVersionChecker)
 }
