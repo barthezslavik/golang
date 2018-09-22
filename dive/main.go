@@ -6,5 +6,8 @@ import (
 )
 
 func main() {
-
+	order := &domain.Customer{}
+	order.Id = 1
+	order.Name = "Order"
+	fmt.Println(order)
 }
