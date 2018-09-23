@@ -1,10 +1,6 @@
-// Full spec-compliant TodoMVC with Iris
-// and hash-based routing in ~200 effective lines of JavaScript.
-
 var socket = new Ws("ws://localhost:1234/todos/sync");
 
 socket.On("saved", function () {
-  // console.log("receive: on saved");
   fetchTodos(function (items) {
     app.todos = items
   });
@@ -69,25 +65,6 @@ var app = new Vue({
     editedTodo: null,
     visibility: 'all'
   },
-
-  // we will not use the "watch" as it works with the fields like "hasChanges"
-  // and callbacks to make it true but let's keep things very simple as it's just a small getting started. 
-  // // watch todos change for persistence
-  // watch: {
-  //   todos: {
-  //     handler: function (todos) {
-  //       if (app.hasChanges) {
-  //         todoStorage.save(todos);
-  //         app.hasChanges = false;
-  //       }
-
-  //     },
-  //     deep: true
-  //   }
-  // },
-
-  // computed properties
-  // http://vuejs.org/guide/computed.html
   computed: {
     filteredTodos: function () {
       return filters[this.visibility](this.todos)
@@ -114,8 +91,6 @@ var app = new Vue({
     }
   },
 
-  // methods that implement data logic.
-  // note there's no DOM manipulation here at all.
   methods: {
     notifyChange: function () {
       todoStorage.save(this.todos)
@@ -175,9 +150,6 @@ var app = new Vue({
     }
   },
 
-  // a custom directive to wait for the DOM to be updated
-  // before focusing on the input field.
-  // http://vuejs.org/guide/custom-directive.html
   directives: {
     'todo-focus': function (el, binding) {
       if (binding.value) {
@@ -187,7 +159,6 @@ var app = new Vue({
   }
 })
 
-// handle routing
 function onHashChange() {
   var visibility = window.location.hash.replace(/#\/?/, '')
   if (filters[visibility]) {
@@ -201,5 +172,4 @@ function onHashChange() {
 window.addEventListener('hashchange', onHashChange)
 onHashChange()
 
-// mount
-app.$mount('.todoapp')
+app.$mount('.app')
