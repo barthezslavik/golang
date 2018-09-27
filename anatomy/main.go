@@ -2,9 +2,7 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
-import "log"
 
 const k = 1
 
@@ -19,4 +17,7 @@ func f(n int) {
 }
 func (s S) m() {
 	fmt.Printf("Hi %s\n", s.name)
+}
+
+func main() {
 }
