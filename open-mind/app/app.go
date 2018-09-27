@@ -5,9 +5,9 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/barthezslavik/golang/mind/app/handler"
-	"github.com/barthezslavik/golang/mind/app/model"
-	"github.com/barthezslavik/golang/mind/config"
+	"github.com/barthezslavik/golang/open-mind/app/handler"
+	"github.com/barthezslavik/golang/open-mind/app/model"
+	"github.com/barthezslavik/golang/open-mind/config"
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
 )

@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/barthezslavik/golang/mind/app/model"
+	"github.com/barthezslavik/golang/open-mind/app/model"
 	"github.com/gorilla/mux"
 	"github.com/jinzhu/gorm"
 )

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/barthezslavik/golang/mind/app"
-	"github.com/barthezslavik/golang/mind/config"
+	"github.com/barthezslavik/golang/open-mind/app"
+	"github.com/barthezslavik/golang/open-mind/config"
 )
 
 func main() {
