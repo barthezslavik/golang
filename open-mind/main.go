@@ -1,14 +1,35 @@
 package main
 
 import (
-	"github.com/barthezslavik/golang/open-mind/app"
+	"os"
+
 	"github.com/barthezslavik/golang/open-mind/config"
+	"github.com/barthezslavik/golang/open-mind/controllers"
+	"github.com/labstack/echo"
 )
 
-func main() {
-	config := config.GetConfig()
+func getPort() string {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "4000"
+	}
 
-	app := &app.App{}
-	app.Initialize(config)
-	app.Run(":3000")
+	return port
 }
+
+func main() {
+	e := echo.New()
+
+	config.Setup(e)
+	controllers.Setup(e.Router())
+
+	e.File("/", "index.html")
+	e.Static("/static", "static")
+
+	err := e.Start(":" + getPort())
+	if err != nil {
+		panic(err)
+	}
+}
+
+// vi:syntax=go
