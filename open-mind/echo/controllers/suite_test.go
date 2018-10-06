@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/barthezslavik/golang/open-mind/controllers"
+	"github.com/barthezslavik/golang/open-mind/echo/controllers"
 	"github.com/labstack/echo"
 
 	. "gopkg.in/check.v1"

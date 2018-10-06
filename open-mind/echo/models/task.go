@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/barthezslavik/golang/open-mind/helpers"
+	"github.com/barthezslavik/golang/open-mind/echo/helpers"
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
 )

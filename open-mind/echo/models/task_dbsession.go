@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/barthezslavik/golang/open-mind/config"
+	"github.com/barthezslavik/golang/open-mind/echo/config"
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
 )

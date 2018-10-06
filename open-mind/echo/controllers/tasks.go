@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/barthezslavik/golang/open-mind/helpers"
-	"github.com/barthezslavik/golang/open-mind/models"
+	"github.com/barthezslavik/golang/open-mind/echo/helpers"
+	"github.com/barthezslavik/golang/open-mind/echo/models"
 	"github.com/globalsign/mgo/bson"
 	"github.com/labstack/echo"
 )

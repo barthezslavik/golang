@@ -1,11 +1,10 @@
 package main
 
 import (
-	"os"
-
-	"github.com/barthezslavik/golang/open-mind/config"
-	"github.com/barthezslavik/golang/open-mind/controllers"
+	"github.com/barthezslavik/golang/open-mind/echo/config"
+	"github.com/barthezslavik/golang/open-mind/echo/controllers"
 	"github.com/labstack/echo"
+	"os"
 )
 
 func getPort() string {
