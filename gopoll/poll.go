@@ -2,7 +2,7 @@ package main
 
 import (
 	"database/sql"
-	"gopoll/handlers"
+	"handlers"
 
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
